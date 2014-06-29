@@ -26,11 +26,26 @@ bs.setItem('name', 'jp')
 console.log(bs.getItem('name')) // => jp
 ```
 
-Credits
---------
+Development
+-----------
 
+To hack on this module, clone it and then:
 
+install selenium (if you haven't):
 
+    npm install -g selenium-standalone
+
+start selenium:
+
+    start-selenium
+
+test in Node.js:
+
+    make node-test
+
+test in browser (assuming chrome is installed, change in file `.min-wd`):
+
+    make browser-test
 
 License
 -------
