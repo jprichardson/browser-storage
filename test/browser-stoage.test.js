@@ -4,8 +4,10 @@ require('terst')
 
 describe('browser-storage', function() {
   it('should store and retreive', function() {
-    bs.__appname__ = 'browser-storage-test'
-    T (bs.__path__.length > 0)
+    if (!process.browser) { //node.js only
+      bs.__appname__ = 'browser-storage-test'
+      T (bs.__path__.length > 0)
+    }
 
     bs.setItem('name', 'jp')
     EQ (bs.getItem('name'), 'jp')
