@@ -19,6 +19,8 @@ Usage
 Example
 -------
 
+**Note:** Just like `localStorage`, if you want to save an object, you'll want to `stringify` it e.g. `JSON.stringify`
+
 ```js
 var bs = require('browser-storage')
 
