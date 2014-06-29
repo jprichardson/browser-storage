@@ -1,7 +1,7 @@
 browser-storage
 =============
 
-Normalizes `localStorage` usage between Browser and Node.js.
+Normalizes `localStorage` usage between Browser and Node.js. May include `sessionStorage` support in the future.
 
 
 Why?
@@ -13,17 +13,17 @@ You probably will almost never need this. Why would you want to use it then? Let
 Usage
 -----
 
-    npm install --save local-storage
+    npm install --save browser-storage
 
 
 Example
 -------
 
 ```js
-var ls = require('local-storage')
+var bs = require('browser-storage')
 
-ls.setItem('name', 'jp')
-console.log(ls.getItem('name')) // => jp
+bs.setItem('name', 'jp')
+console.log(bs.getItem('name')) // => jp
 ```
 
 Credits

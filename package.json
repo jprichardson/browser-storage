@@ -2,13 +2,13 @@
   "name": "browser-storage",
   "version": "0.0.0",
   "description": "Normalizes local storage behavior for the browser and node",
-  "main": "lib/local-storage.js",
+  "main": "lib/browser-storage.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "mocha -R spec",
-    "br": "mochaify -R spec --wd"
+    "test": "./node_modules/.bin/mocha -R spec",
+    "br": "./node_modules/.bin/mochaify -R spec --wd"
   },
   "repository": {
     "type": "git",
@@ -33,5 +33,14 @@
     "terst": "^0.2.0",
     "mocha": "^1.20.1",
     "mochify": "^0.9.4"
+  },
+  "browser": {
+    "fs-extra": false,
+    "os": false,
+    "path-extra": false
+  },
+  "dependencies": {
+    "path-extra": "^0.2.1",
+    "fs-extra": "^0.9.1"
   }
 }
