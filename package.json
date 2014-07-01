@@ -3,17 +3,9 @@
   "version": "0.0.1",
   "description": "Normalizes local storage behavior for the browser and node",
   "main": "lib/browser-storage.js",
-  "directories": {
-    "test": "test"
-  },
-  "scripts": {
-    "test": "./node_modules/.bin/mocha -R spec",
-    "br": "./node_modules/.bin/mochaify -R spec --wd"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/jprichardson/local-storage"
-  },
+  "author": "JP Richardson",
+  "license": "MIT",
+  "homepage": "https://github.com/jprichardson/browser-storage",
   "keywords": [
     "browser",
     "storage",
@@ -23,24 +15,33 @@
     "session",
     "session-storage"
   ],
-  "author": "JP Richardson",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/jprichardson/local-storage/issues"
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jprichardson/browser-storage"
   },
-  "homepage": "https://github.com/jprichardson/local-storage",
   "devDependencies": {
-    "terst": "^0.2.0",
+    "coveralls": "~2.10.0",
     "mocha": "^1.20.1",
-    "mochify": "^0.9.4"
+    "mocha-lcov-reporter": "0.0.1"
   },
-  "browser": {
-    "fs-extra": false,
-    "os": false,
-    "path-extra": false
+  "testling": {
+    "browsers": [
+      "android-browser/4.2..latest",
+      "chrome/20..latest",
+      "firefox/21..latest",
+      "ipad/6..latest",
+      "iphone/6..latest",
+      "opera/15..latest",
+      "safari/latest"
+    ],
+    "harness": "mocha-bdd",
+    "files": "test/*.js"
+  },
+  "scripts": {
+    "test": "npm run-script unit",
+    "unit": "./node_modules/.bin/_mocha test/*.js"
   },
   "dependencies": {
-    "path-extra": "^0.2.1",
-    "fs-extra": "^0.9.1"
+    "node-localstorage": "^0.3.4"
   }
 }
