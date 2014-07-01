@@ -31,23 +31,20 @@ console.log(bs.getItem('name')) // => jp
 Development
 -----------
 
-To hack on this module, clone it and then:
+To hack on this module, clone it and ensure you have [testling](https://github.com/substack/testling) installed.
 
-install selenium (if you haven't):
+To run node tests:
 
-    npm install -g selenium-standalone
+``` bash
+npm test
+```
 
-start selenium:
+To run browser tests:
 
-    start-selenium
+``` bash
+testling
+```
 
-test in Node.js:
-
-    make node-test
-
-test in browser (assuming chrome is installed, change in file `.min-wd`):
-
-    make browser-test
 
 License
 -------
