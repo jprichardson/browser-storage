@@ -1,6 +1,6 @@
 {
   "name": "browser-storage",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Normalizes local storage behavior for the browser and node",
   "main": "lib/browser-storage.js",
   "author": "JP Richardson",
